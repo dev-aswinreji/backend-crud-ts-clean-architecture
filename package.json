@@ -1,0 +1,24 @@
+{
+  "name": "BACKEND-TS-WITH-CLEAN",
+  "version": "1.0.0",
+  "description": "This is a backend server with proper authenctication , backend is build using expressjs",
+  "main": "app.ts",
+  "author": "Aswin Reji",
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon src/app.ts"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.20.0",
+    "cors": "^2.8.5",
+    "express": "^4.21.0",
+    "prisma": "^5.20.0"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.6.1",
+    "nodemon": "^3.1.7",
+    "typescript": "^5.6.2"
+  }
+}
