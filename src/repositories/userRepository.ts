@@ -6,7 +6,7 @@ const prisma = new PrismaClient();
 
 interface IuserRepository {
     getAllUsers(): Promise<IUser[]>;
-    getUserById(id: number): Promise<IUser | null>;
+    getUserById(userid: number): Promise<IUser | null>;
     createUser(user: CreateUserDTO): Promise<IUser>;
 }
 
@@ -15,8 +15,8 @@ class UserRepository implements IuserRepository {
         return prisma.user.findMany();
     }
 
-    async getUserById(id: number): Promise<IUser | null> {
-        return prisma.user.findUnique({where:{id}})
+    async getUserById(userid: number): Promise<IUser | null> {
+        return prisma.user.findUnique({where:{userid}})
     }
 
     async createUser(user: CreateUserDTO): Promise<IUser> {
