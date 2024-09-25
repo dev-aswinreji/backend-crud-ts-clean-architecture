@@ -1,5 +1,5 @@
 import jwt from 'jsonwebtoken';
-import bcrypt from 'bcryptj';
+import bcrypt from 'bcrypt';
 
 import userRepository from '../repositories/userRepository';
 
