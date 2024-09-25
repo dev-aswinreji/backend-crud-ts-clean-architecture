@@ -4,8 +4,8 @@ import userControllers from "../controllers/userControllers";
 
 const router = Router()
 
-router.get('/api/users',userControllers.getAllUsers.bind(userControllers))
-router.get('/api/users/:id',userControllers.getUserById.bind(userControllers))
-router.post('/api/users',userControllers.createUser.bind(userControllers))
+router.get('/users', userControllers.getAllUsers.bind(userControllers))
+router.get('/users/:id', userControllers.getUserById.bind(userControllers))
+router.post('/users', userControllers.createUser.bind(userControllers))
 
 export default router
