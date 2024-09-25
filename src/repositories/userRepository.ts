@@ -22,6 +22,10 @@ class UserRepository implements IuserRepository {
     async createUser(user: CreateUserDTO): Promise<IUser> {
         return prisma.user.create({data:user})
     }
+
+    async getUserEmail(email:string):Promise<IUser | null>{
+        return prisma.user.findUnique({where:{email:email}})
+    }
 }
 
 
