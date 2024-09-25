@@ -33,7 +33,7 @@ class UserController {
     async createUser(req: Request, res: Response): Promise<void> {
         try {
             const { name, email, password } = req.body as CreateUserDTO
-            const newUser = await userService.createUser({ name, email, password, isadmin: true, isauth: true })
+            const newUser = await userService.createUser({ name, email, password })
             res.status(201).json(newUser)
         } catch (error) {
             console.log(error, "Error in UserController createUser");

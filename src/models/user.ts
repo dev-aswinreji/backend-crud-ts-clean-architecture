@@ -6,7 +6,5 @@ export class User implements IUser {
         public name: string,
         public email: string,
         public password: string,
-        public isauth: boolean,
-        public isadmin:boolean
     ) { }
 }
