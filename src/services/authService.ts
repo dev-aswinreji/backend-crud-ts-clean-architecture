@@ -29,10 +29,10 @@ class AuthService {
     }
 
     async register(user: IUser): Promise<IUser> {
-        const hashedPassword = await bcrypt.hash(user.password,10);
+        const hashedPassword = await bcrypt.hash(user.password, 10);
         return userRepository.createUser({
             ...user,
-            password:hashedPassword
+            password: hashedPassword
         })
     }
 }
