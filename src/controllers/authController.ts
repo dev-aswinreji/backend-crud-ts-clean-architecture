@@ -23,7 +23,14 @@ class AuthController {
         const { name, email, password } = req.body as CreateUserDTO
 
         try {
-            
+            const user = await AuthService.register({
+                name,
+                email,
+                password,
+                isauth: true,
+                isadmin: false
+            })
+
         } catch (error) {
             console.log(error, "Auth Controller error");
             let errorMessage = "Auth Controller Error"
