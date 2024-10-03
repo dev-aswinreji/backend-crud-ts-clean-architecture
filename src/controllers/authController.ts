@@ -26,9 +26,7 @@ class AuthController {
             const user = await AuthService.register({
                 name,
                 email,
-                password,
-                isauth: true,
-                isadmin: false
+                password
             })
 
         } catch (error) {
