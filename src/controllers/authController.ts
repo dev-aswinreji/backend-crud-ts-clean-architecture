@@ -23,11 +23,13 @@ class AuthController {
         const { name, email, password } = req.body as CreateUserDTO
 
         try {
+
             const user = await AuthService.register({
                 name,
                 email,
                 password
             })
+            res.status(201).json(user)
 
         } catch (error) {
             console.log(error, "Auth Controller error");
@@ -35,7 +37,7 @@ class AuthController {
             if (error instanceof Error) {
                 errorMessage = error.message
             }
-            res.status(401).json({ error: errorMessage })
+            res.status(400).json({ error: errorMessage })
         }
     }
 }
