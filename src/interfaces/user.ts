@@ -4,12 +4,14 @@ export interface IUser {
     name: string;
     email: string;
     password: string;
+    isauth?: boolean;
 }
 
 export interface CreateUserDTO {
     name: string;
     email: string;
     password: string;
+    isauth: boolean;
 }
 
 export interface UserLogin {

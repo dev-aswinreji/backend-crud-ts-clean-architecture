@@ -32,6 +32,7 @@ class AuthService {
         const hashedPassword = await bcrypt.hash(user.password, 10);
         return userRepository.createUser({
             ...user,
+            isauth:true,
             password: hashedPassword
         })
     }

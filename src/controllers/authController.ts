@@ -27,7 +27,8 @@ class AuthController {
             const user = await AuthService.register({
                 name,
                 email,
-                password
+                password,
+                isauth:true
             })
             res.status(201).json(user)
 
