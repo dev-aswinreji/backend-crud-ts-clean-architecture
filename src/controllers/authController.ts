@@ -10,8 +10,8 @@ class AuthController {
             const token = await AuthService.login(email, password)
             res.status(200).json({ token })
         } catch (error) {
-            console.log(error, "Auth Controller error");
             let errorMessage = "Auth Controller Error"
+            console.log(error, "Auth Controller error");
             if (error instanceof Error) {
                 errorMessage = error.message
             }
