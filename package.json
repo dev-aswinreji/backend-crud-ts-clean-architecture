@@ -2,7 +2,7 @@
   "name": "BACKEND-TS-WITH-CLEAN",
   "version": "1.0.0",
   "description": "This is a backend server with proper authenctication , backend is build using expressjs",
-  "main": "app.ts",
+  "main": "src/app.ts",
   "author": "Aswin Reji",
   "license": "MIT",
   "scripts": {
